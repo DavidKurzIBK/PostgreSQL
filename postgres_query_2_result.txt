@@ -1,0 +1,13 @@
+
+   name   | subdivision | two_letter | subcountry_name
+----------+-------------+------------+-----------------
+ Austria  |           1 | AT         | Burgenland
+ Austria  |           2 | AT         | Kärnten
+ Austria  |           3 | AT         | Niederösterreich
+ Austria  |           4 | AT         | Oberösterreich
+ Austria  |           5 | AT         | Salzburg
+ Austria  |           6 | AT         | Steiermark
+ Austria  |           7 | AT         | Tirol
+ Austria  |           8 | AT         | Vorarlberg
+ Austria  |           9 | AT         | Wien
+(9 rows)

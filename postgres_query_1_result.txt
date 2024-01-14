@@ -1,0 +1,5 @@
+ name  | version
+-------+----------
+ VERSION | 15.4
+(1 row)
+

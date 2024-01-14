@@ -1,0 +1,29 @@
+
+Die 3-Schichten-Architektur eines Datenbankmanagementsystems (DBMS) trennt Aspekte der Datenbankverwaltung, was die Wartbarkeit, Skalierbarkeit und Sicherheit des Systems 
+verbessert und die die Entwicklung, Wartung und Aktualisierung von Anwendungen erleichtert, die auf die Datenbank zugreifen. 
+
+Sie besteht aus drei Schichten:
+
+1. Anwendungsschicht (englisch: Application Layer):
+Ist die oberste Schicht und enthält Anwendungsprogramme oder Benutzerschnittstellen, die direkt mit der Datenbank interagieren. 
+Ihre Hauptaufgaben sind:
+- Benutzerinteraktion: Ermöglicht auf die Datenbank zuzugreifen, Abfragen auszuführen, Daten einzufügen, zu aktualisieren und zu löschen.
+- Sicherheits- und Zugriffskontrolle: Verwaltet die Authentifizierung und Autorisierung von Benutzern und stellt sicher, dass nur autorisierte Personen auf die Datenbank zugreifen können.
+- Geschäftslogik: Es wird die Anwendung implementiert, die festlegt, wie Daten verarbeitet und präsentiert werden.
+
+2. Logikschicht (englisch: Logic Layer):
+Ist die Mittelschicht und enthält die Datenbank-Management-Logik. 
+Ihre Hauptaufgaben sind:
+- Datenbankzugriff und -verwaltung: kommuniziert mit der Datenbank, einschließlich Abfrageerstellung, Datenbankverbindung und Transaktionsverwaltung.
+- Geschäftsregeln: komplexe Geschäftsregeln und Datenvalidierung werden implementiert, um sicherzustellen, dass die Daten konsistent und korrekt gespeichert sind.
+- Datenkonsistenz und -integrität: Gewährleistet die Verwaltung der Datenbank gemäß den ACID-Kriterien, um Datenkonsistenz und -integrität sicherzustellen.
+
+3. Datenspeicherschicht (englisch: Data Storage Layer):
+Ist die unterste Schicht und enthält die eigentliche Datenbank, in der die Daten physisch gespeichert werden. 
+Ihre Aufgaben sind:
+- Speicherung und Organisation von Daten: Es werden Daten in Tabellen, Indizes und anderen Datenstrukturen gespeichert und organisiert.
+- Datenzugriff und -verwaltung: Mechanismen für den effizienten Zugriff auf Daten, Indexierung und Speicherungsoptimierung werden verwendet.
+- Datensicherheit und -integrität: Die Datenspeicherschicht kann Mechanismen zur Sicherung und Wiederherstellung von Daten sowie zur Verhinderung von Datenkorruption bereitstellen.
+
+Die 3-Schichten-Architektur trennt die Aspekte der Datenbankverwaltung, was die Wartbarkeit, Skalierbarkeit und Sicherheit des Systems verbessert und erleichtert 
+die Entwicklung, Wartung und Aktualisierung von Anwendungen, die auf die Datenbank zugreifen.

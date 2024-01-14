@@ -1,0 +1,26 @@
+
+ACID-Kriterien sind eine Gruppe von Eigenschaften, um die Datenkonsistenz und die Zuverlässigkeit von Transaktionen in DB's sicherzustellen. 
+ACID steht für Atomicity (Atomarität), Consistency (Konsistenz), Isolation (Isolation) und Durability (Dauerhaftigkeit). 
+
+Hier sind die ACID-Kriterien und ihre Erklärungen:
+
+1. Atomicity (Atomarität):
+Hier wird eine Transaktion als unteilbare Einheit behandelt. 
+Entweder werden alle in der Transaktion enthaltenen Aktionen erfolgreich ausgeführt, oder keine davon. 
+Wenn eine Aktion in der Transaktion fehlschlägt, werden alle vorherigen Aktionen rückgängig gemacht, soass die Datenbank in einem konsistenten Zustand bleibt. 
+Atomarität garantiert, dass Transaktionen entweder vollständig oder überhaupt nicht ausgeführt werden.
+
+2. Consistency (Konsistenz):
+Bedeutet, dass eiine Transaktion die Datenbank von einem konsistenten Zustand in einen anderen konsistenten Zustand überführt. 
+Hier dürfen die in der Transaktion durchgeführten Aktionen die Integritätsregeln der Datenbank nicht verletzen. 
+Wenn eine Transaktion abgeschlossen ist, sollte die Datenbank in einem gültigen Zustand sein, der die definierten Regeln und Beschränkungen einhält.
+
+3. Isolation (Isolation):
+Ist eine Art Trennung von Transaktionen, sodass Transaktionen unabhängig voneinander ausgeführt werden und nicht miteinander interferieren. 
+Änderungen, die von einer Transaktion vorgenommen werden, sind erst sichtbar, wenn die Transaktion abgeschlossen ist. 
+Das verhindert, dass gleichzeitige Transaktionen inkonsistente Ergebnisse liefern oder sich gegenseitig beeinflussen.
+
+4. Durability (Dauerhaftigkeit):
+Sie garantiert, dass einmal abgeschlossene Transaktionen dauerhaft in der Datenbank gespeichert werden. 
+Im Falle eines Systemfehlers, Absturzes oder Neustarts müssen alle abgeschlossenen Transaktionen in der Datenbank intakt bleiben. 
+Durch das Schreiben der Transaktionsänderungen in persistente Speichermedien wie Festplatten oder SSDs wird dies gewährleistet.

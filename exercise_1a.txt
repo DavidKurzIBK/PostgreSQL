@@ -1,0 +1,28 @@
+DBMS bieten eine effizientere, sicherere und flexiblere Möglichkeit zur Verwaltung von Daten im Vergleich zu herkömmlichen Dateisystemen. 
+Sie sind nützlich in Umgebungen, in denen große Mengen an Daten gespeichert, verwaltet und abgefragt werden müssen. 
+Folgende 5 Vorteile sind:
+
+
+1. Datenintegrität und Konsistenz:
+DBMS gewährleisten Datenintegrität und -konsistenz, indem verschiedene Mechanismen zur Umsetzung von Datenintegritätsregeln und -beziehungen angewendet werden. 
+Dadurch wird sichergestellt, dass Daten in der Datenbank immer in einem konsistenten Zustand sind, und so Datenfehler vermieden werden.
+
+2. Datenzugriff und -abfrage:
+DBMS bieten leistungsfähige Abfragemöglichkeiten, die es ermöglichen, Daten effizient abzurufen und zu filtern. 
+Dies ist im Vergleich zu herkömmlichen Dateien ohne dem Suchen nach Daten möglich.
+
+3. Datensicherheit und Zugriffskontrolle:
+DBMS bieten erweiterte Sicherheitsfunktionen, die den Datenzugriff steuern und schützen. 
+Es können Benutzerberechtigungen und Zugriffsrechte festgelegt werden, sodass nur autorisierte Personen auf bestimmte Teile der Datenbank zugreifen können. 
+In herkömmlichen Dateien ist es schwieriger, einen vergleichbaren Grad an Sicherheit zu gewährleisten.
+
+4. Datenkonsolidierung und -zentralisierung:
+In DBMS ist Konsolidierung und Zentralisierung von Daten in einer einzigen Datenbank möglich. 
+Dies vereinfacht die Datenverwaltung erheblich, da alle relevanten Daten an einem Ort gespeichert werden. 
+In herkömmlichen Dateisystemen sind Daten oft auf verschiedene Dateien und Verzeichnisse verteilt, was die Wartung und Verwaltung erschwert.
+
+5. Datenunabhängigkeit:
+In DBMS sind Anwendungsprogramme von der physischen Struktur der Datenbank getrennt, also Datenunabhängig. 
+Dies ermöglicht Änderungen an der Datenbankstruktur vorzunehmen, ohne bestehende Anwendungen zu beeinträchtigen. 
+In herkömmlichen Dateisystemen sind Änderungen an der Datenstruktur aufwendiger und riskanter, da sie Auswirkungen auf viele Programme haben können.
+
