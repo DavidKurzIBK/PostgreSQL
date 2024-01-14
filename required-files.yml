@@ -1,39 +1,40 @@
 ---
-Aufgabe 1:
-    - mapping.pdf
+Aufgabe 1a:
+    - exercise1_a.sql
+
+Aufgabe 1b:
+    - exercise1_b.sql
+
+Aufgabe 1c:
+    - exercise1_c.sql
+
+Aufgabe 1d:
+    - exercise1_d.sql
 
 Aufgabe 2a:
-    - 2a_result.txt
-
+    - exercise2_a.sql
+    - exercise2_a_result.txt
 Aufgabe 2b:
-    - 2b_result.txt
-
+    - exercise2_b.sql
+    - exercise2_b_result.txt
 Aufgabe 2c:
-    - 2c_result.txt
-
+    - exercise2_c.sql
+    - exercise2_c_result.txt
 Aufgabe 2d:
-    - 2d_result.txt
-
-Aufgabe 3a:
-    - 3a_query.txt
-    - 3a_result.txt
-
-Aufgabe 3b:
-    - 3b_query.txt
-    - 3b_result.txt
-
-Aufgabe 3c:
-    - 3c_query.txt
-    - 3c_result.txt
-
-Aufgabe 3d:
-    - 3d_query.txt
-    - 3d_result.txt
-
-Aufgabe 3e:
-    - 3e_query.txt
-    - 3e_result.txt
-
-Aufgabe 3f:
-    - 3f_query.txt
-    - 3f_result.txt
+    - exercise2_d.sql
+    - exercise2_d_result.txt
+Aufgabe 2e:
+    - exercise2_e.sql
+    - exercise2_e_result.txt
+Aufgabe 2f:
+    - exercise2_f.sql
+    - exercise2_f_result.txt
+Aufgabe 2g:
+    - exercise2_g.sql
+    - exercise2_g_result.txt
+Aufgabe 2h:
+    - exercise2_h.sql
+    - exercise2_h_result.txt
+Aufgabe 2i:
+    - exercise2_i.sql
+    - exercise2_i_result.txt
