@@ -1,0 +1,22 @@
+R(A, B, C, D, E) mit den funktionalen Abhängigkeiten F A = {A → BCDE, BC → DE, C → AD, AB → BE}
+
+-> Entferne redundante Abhängigkeiten, die auf Reflexivität beruhen. Wenn Y von X abhängt, dann impliziert dies nicht notwendigerweise, dass X von Y abhängt
+-> Triviale Abhängigkeiten entfernen: Entferne triviale Abhängigkeiten, bei denen die rechte Seite bereits in der linken Seite enthalten ist.
+-> Transitivität reduzieren: Reduziere transitive Abhängigkeiten. Wenn X→Y und Y→Z, dann kann die Abhängigkeit X→Z redundant sein.
+    
+1)  Linksreduktion: . (eliminiere Links mind 2er Paare) 
+	BC -> DE reduzieren zu C -> DE (B überflüssig) 
+	AB -> BE reduzieren zu A -> BE (B ebenf. überflüssig) 
+	gesamt: A -> BCDE, C -> DE, C -> AD, A -> BE (Schreibe die nun veränderte FA nochmal an) 
+
+2)  Rechtsreduktion: (eliminiere Rechts mind. 2er Paare) 
+	A -> BCDE reduzieren zu A -> C (B,D,E überflüssig, da schon "getroffen") 
+	C -> DE reduzieren zu C -> {} (alles rechts ist überflüssig)
+	gesamt: A -> C, C -> {}, C -> AD, A -> BE (Schreibe die nun veränderte FA nochmal an)  
+
+3)  Eliminierung von leeren Mengen: hier C -> {}: A -> C, C -> AD, A -> BE
+
+4)  Vereinheitlichung der linke Seite: Konsolidiere mehrere Abhängigkeiten mit gemeinsamen linken Seiten zu einer einzigen Abhängigkeit:
+        -> Zusammenfassen nach der A-Regel: zu A -> BCE
+
+5)  kanonische Überdeckung ist somit: A -> BCE, C -> AD

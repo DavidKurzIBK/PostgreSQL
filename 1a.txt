@@ -1,0 +1,36 @@
+In funktionalen Abhängigkeit: versch. Arten von Schlüsseln, darunter Superkeys, Schlüssel und Schlüsselkandidaten.
+Schlüsselkandidat: ist minimale Superkey, bedeutet, er ist eindeutig identifiziert, aber enthält keine überflüssigen Attribute.
+Alle Attributwerte atomar: sind alle schonmal 1NF; atomar: Werte in eimem Attribut (Spalteneintrag nicht weiter aufgespalten) können nicht weiter unterteilt werden!!
+        1NF:atomar, eindeutige Spaltennamen, Reihenfolge in Tabelle ist unerheblich
+            -> Tabelle gut strukturiert und effizient abfragbar um redundanzen und inkonsistenzen zu vermeiden
+            -> wenn nicht: Aufteilung von Spalten oder zusätzl. Tabelle
+        2NF: 1NF + keine teilweise Abhängigkeit von einem zusammengesetzten Primärschlüssel in Bezug auf 
+            Nicht-Schlüsselattribute existieren
+            -> "StudentID", "KursID" und "Kursbezeichnung", Primärschlüssel aus Spalten "StudentID" und "KursID"
+            Wenn "Kursbezeichnung" von "KursID" abhängig ist, nicht aber von der gesamten Kombination aus
+            "StudentID" und "KursID", wäre Tabelle nicht in der 2NF.
+            -> 2NF erreichen: verknüpfe Studenten und Kurse Tabellen über Fremdschlüssel
+        3NF: 2NF + keine transitiven Abhängigkeiten zwischen Nicht-Schlüsselattributen und dem Primärschlüssel 
+            existieren
+            -> Tabelle mit Spalten "LehrerID", "Schulfach", "Klassenstufe" und "Lehrername", 
+            Primärschlüssel "LehrerID" ist. Wenn "Lehrername" von "LehrerID" abhängt und das "Schulfach" von
+            "Lehrername" abhängt, hätten wir eine transitive Abhängigkeit, und die Tabelle wäre nicht in der 3NF.
+            -> zwei separate Tabellen aufteilen, eine für "Lehrer" mit "LehrerID" und "Lehrername" und eine für
+            "Unterrichtsfächer" mit "LehrerID", "Schulfach" und "Klassenstufe"
+        BCNF: 3NF + jede nicht triviale Abhängigkeit X → Y (wobei X und Y Mengen von Attributen sind) muss X ein
+            Superkey der Tabelle sein: linke Seite der funktionalen Abhängigkeit X den Primärschlüssel oder einen
+            Superkey der Tabelle darstellen muss.
+            -> 
+
+F A = {ABD → C, A → E, E → A}
+
+Verschluss (Closure) berechnen: 
+    1. füge ABD hinzu und verwende ABD -> C: {C} 
+    2. A -> E und E -> A bilden sich selbst ab..fügen keine neuen Attribute hinzu. (Bedingung in Verschluss verletzt)
+
+B, D, E sind restlichen nicht erreichten Attributen und werden zu Schlüsselkandidaten, weil sie 
+enthalten sein müssen, da sie bei keiner anderen FA vorkommen.
+
+S K={ABD,BDE}
+
+3NF, da hier A -> E die BCNF verletzt (A kein Superschlüssel)!!

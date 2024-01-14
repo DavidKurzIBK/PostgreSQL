@@ -1,0 +1,12 @@
+F A = {BD → E, CE → BD, BC → AD, A → BCE}
+
+Verschluss (Closure) berechnen:
+    1. füge CE hinzu und verwende CE -> BD: {B (neu), D (neu)}
+    2. füge BC hinzu und verwende BC -> AD: {A (neu), D}
+    3. füge A hinzu und verwende A -> BCE: {B, C (neu), E (neu)}
+    4. füge BD hinzu , verwende BD -> E .. fügt kein neues Attribut (Bedingung in Verschluss verletzt)
+
+S K={CE, BC, A}
+
+BD → E ist kein Teil der Schlüsselkandidaten.
+3NF, da hier BD -> E die BCNF verletzt (BD kein Superschlüssel)!!

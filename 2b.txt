@@ -1,0 +1,28 @@
+Gegeben sei das Schema R(A, B, C, D, E, F, G, H) mit der kanonischen Überdeckung FC = {A → DF, G → B, C → AH, E → G, B → C}.
+
+
+1)  eine kanonische Überdeckung ist bereits gegeben; gegebenen funktionalen Abhängigkeiten (FDs) bereits in ihrer minimalen Form vorliegen!!  
+
+2)  erzeuge Relation R1(A, D, F) mit F1 = {A -> DF}
+
+3)  erzeuge Relation R2(B, G) mit F2 = {G -> B}
+
+4)  erzeuge Relation R3(A, C, H) mit F3 = {C -> AH}
+
+5)  erzeuge Relation R4(E, G) mit F4 = {E -> G}
+
+6)  erzeuge Relation R5(B, C) mit F5 = {B -> C}
+
+7)  Schlüsselkandidat E, daher keine weitere Relation nötig, (d.h., ein Schlüssel zur eindeutigen Identifizierung von Tupeln in der Relation R)
+
+F4 -> F2 -> F5 -> F3 -> F1
+
+gegebene Relation R in fünf kleinere Relationen R1, R2, R3, R4 und R5 zerlegt;
+jede dieser Teilrelationen eine bestimmte funktionale Abhängigkeit erfüllt; 
+Diese Zerlegung ist sowohl verlustfrei als auch abhängigkeitsbewahrend, was bedeutet, dass alle Informationen aus der ursprünglichen Relation erhalten bleiben und die funktionalen Abhängigkeiten korrekt repräsentiert sind.
+wenn nicht verlustfrei, müssen Fremdschlüssel eingefügt werden um Beziehungen zwischen einzelnen Teiltabellen zu repräsentieren!! 
+
+
+
+
+

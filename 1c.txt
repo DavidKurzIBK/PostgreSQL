@@ -1,0 +1,11 @@
+F A = {AE → C, C → AB, D → CE}
+
+Verschluss (Closure) berechnen:
+    1. D fügt C, E neu hinzu
+    2. C würde AB neu, aber AE bildet auf C (Bedingung in Verschluss verletzt)
+
+S K = {D}
+
+AE und C keine Schlüsselkandidaten 
+
+2NF, da hier C -> AB die 3NF verletzt (C kein Superschlüssel, AB nicht prim) !! 

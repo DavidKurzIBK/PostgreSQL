@@ -1,0 +1,8 @@
+Identity1: Athlete (primary key: athlete_id, attributes: name, age)
+Identity2: Event (primary key: event_id, foreign keys: athlete_id, team_id, attributes: title, date, is_team_event)
+Identity3: Team (primary key: team_id, foreign keys: athlete_id, nation_id, attributes: name)
+Identity4: Nation (primary key: nation_id, attributes: name, flag)
+Relation1: participates1 (primary and foreign key: athlete_id, event_id, attribute: rank)
+Relation2: participates2 (primary and foreign key: team_id, event_id, attribute: rank)
+Relation3: is_part_of (primary and foreign key: athlete_id, team_id)
+Relation4: starts_for (primary and foreign key: team_id, nation_id)

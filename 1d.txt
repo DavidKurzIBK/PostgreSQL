@@ -1,0 +1,12 @@
+F A = {A → B, BC → A}
+
+Verschluss (Closure) berechnen:
+    1. BC fügt A hinzu (A neu) 
+    2. A wird verwendet um B (neu),
+    3. C, D, E sind restlichen nicht erreichten Attributen und werden zu Schlüsselkandidaten, weil sie enthalten sein müssen, da sie bei keiner anderen FA vorkommen.
+
+S K={ACDE, BCDE} 
+
+
+(E und D müssen enthalten sein, da sie bei keiner anderen FA vorkommen)
+3NF, da hier A -> B die BCNF verletzt (A kein Superschlüssel)!!
