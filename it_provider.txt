@@ -1,0 +1,20 @@
+Im ER-Modell gibt es einige Aspekte der obigen Spezifikation, die nicht direkt oder vollständig modelliert werden. 
+Hier sind die Aspekte, die nicht im Modell berücksichtigt sind, und mögliche Lösungen:
+
+1. Überprüfung der Existenz von Liefer- und Rechnungsadressen:
+Spezifikation besagt, dass überprüft werden muss, ob angegebene Liefer- und Rechnungsadresse existiert, bevor eine Bestellung akzeptiert wird. 
+Dies erfordert eine externe Validierung und erfolgt normalerweise in der Anwendungslogik (meist nicht innerhalb DBMS).
+
+Lösung: Adressenvalidierung sollte in der Anwendungslogik oder im Datenzugriffscode erfolgen, bevor es in die Datenbank eingefügt wird.
+
+2. Löschung von Kundendaten:
+Spezifikation besagt, dass Kundendaten gelöscht werden, wenn keine Bestellungen mehr für sie existieren und dass Bestellungen zwei Jahre nach Lieferung gelöscht werden. 
+Dieses Modell enthält keine Logik zur automatischen Löschung von Daten.
+
+Lösung: Löschung von Kundendaten und Bestellungen sollte durch ein DBMS oder separate Hintergrundanwendung durchgeführt werden. Wäre eine Aufgabe der Datenbankverwaltung.
+
+3. Bestellung von zusätzlicher Software:
+Kunden können zusätzliche Software bestellen, die für das Betriebssystem in verschiedenen Versionen vorliegen kann. Das Modell berücksichtigt dies nicht explizit.
+
+Lösung: Um Bestellung von zusätzlicher Software zu berücksichtigen, könnte eine Entität "SoftwareOrder" mit Beziehungen zu Kunden und Software erstellt werden, 
+die Information zur Software und dessen Version enthält. 
