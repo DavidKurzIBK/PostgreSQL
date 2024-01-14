@@ -1,0 +1,12 @@
+--Selektion (Selection):
+--Wählen Sie alle Turniere in Dänemark aus. (Tournament)
+
+--Natürliche Verknüpfung:
+--Verknüpfen Sie die ausgewählten Turniere mit den Matches basierend auf der Turnier-ID.
+
+--Beachten Sie, dass die natürliche Verknüpfung auf der gemeinsamen Attribut-Turnier-ID erfolgt.
+
+--Projektion (Projection):
+--Wählen Sie nur die relevanten Spalten (Turnier-ID, Spieler-IDs, Ergebnis) aus.
+
+π player1Id,player2Id,result(σ Tournament.id=Match.tournamentId (σ country='Denmark'(Tournament)⨯Match))

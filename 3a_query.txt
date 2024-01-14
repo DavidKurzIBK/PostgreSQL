@@ -1,0 +1,4 @@
+π firstname, lastname (σ date(birthday) < date('1945-01-01') (Player))
+
+1. Selection (σ): date(birthday) < date('1945-01-01'): condition filters rows in the Player table where date of birth (converted to a date) is earlier than January 1, 1945.
+2. Projection (π):firstname, lastname: part of the query specifies to include the 'firstname' and 'lastname' columns in the result.

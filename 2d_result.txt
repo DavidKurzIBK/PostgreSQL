@@ -1,0 +1,11 @@
+1. Perform the natural join of relation S with the rename operation ρ(E←B,F←C,G←D)S, renaming columns B, C, and D to E, F, and G, respectively.
+
+2. Project the resulting relation on columns B, C, D  obtained in the previous step to X.
+
+3. Rename relation S to Y.
+
+4. Perform the natural join (⋈) of the relations obtained in steps 2 and 3 on the condition X.C=Y.C ∧ X.G=Y.D. 
+
+5. Project the resulting relation on columns X.E, X.F, X.G, Y.B, Y.C, Y.D
+
+X.E	X.F	X.G	Y.B	Y.C	Y.D

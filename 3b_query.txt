@@ -1,0 +1,10 @@
+π email ((Player ⨝ Ranking) ⨝ (σ title = 'Grand Master' ∨ title = 'Professional' (Ranking)))
+
+1. title = 'Grand Master' ∨ title = 'Professional': condition filters rows in the Ranking table where the title is either 'Grand Master' or 'Professional'. symbol ∨ represents the logical OR operation.
+
+2. Player ⨝ Ranking: a natural join between the Player and Ranking tables based on common columns. natural join automatically matches columns with the same name in both tables.
+
+3.  result of the previous join is joined with filtered result of Ranking based on title condition. means only players with a ranking title of 'Grand Master' or 'Professional' are considered in this final join.
+
+4. email: This part of the query specifies that you want to include the 'email' column in the result.
+

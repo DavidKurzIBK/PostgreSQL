@@ -1,0 +1,10 @@
+π Player.firstname, Player.lastname (σ Tournament.start_date > '2016-07-01' and Participation.finalRank = 1
+ (Player⋈ id = playerId Participation ⋈ tournamentId = id Tournament))
+
+
+
+1. Player ⋈ id = playerId Participation:  natural join between the Player and Participation tables based on the common column id in Player and playerId in Participation.
+2. Participation ⋈ tournamentId = id Tournament: another join, this time between the result of the previous join and the Tournament table based on the common columns tournamentId in Participation and id in Tournament.
+3.Tournament.start_date > '2016-07-01': condition filters tournaments based on start date. selects only those tournaments that started after July 1, 2016.
+4. Participation.finalRank = 1: condition filters participations based on their final rank. It selects only those participations where the final rank is equal to 1.
+5. Player.firstname, Player.lastname: part of the query specifies the columns you want to include in the result. It's selecting the first name and last name of players.

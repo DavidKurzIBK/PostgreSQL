@@ -1,0 +1,8 @@
+A	B	C	D
+1	a	7	8
+7	t	8	9
+4	c	5	6
+9	t	8	9
+
+
+A natural join is a type of join that combines two tables based on all of their common columns. In this case, the common column is B, so the natural join combines all of the rows in R and S that have the same value for B. The resulting table contains all of the columns from both R and S, and any rows that do not have a matching value for B are not included in the result.

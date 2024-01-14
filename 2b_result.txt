@@ -1,0 +1,4 @@
+A	R.B	S.B	C	D
+7	t	a	7	8
+
+To calculate the natural join of two relations, we find all rows that have the same value for both of the join columns. In this case, the join columns are A and C, so we find all rows in R and S that have the same value for A and C. The resulting table contains all of the columns from both R and S, and any rows that do not have a matching value for both A and C are not included in the result.

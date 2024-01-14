@@ -1,0 +1,9 @@
+π Tournament.id,Tournament.name (σ Match.duration ='00:03'(Tournament ⋈ Tournament.id=Match.tournamentId Match))
+
+
+1. Natürlicher Verbund (Join) von  Tournament und  Match über die Bedingung Tournament.id=Match.tournamentId.
+
+2. sigma : Selektion der Zeilen in Match , in denen die Spalte "duration" den Wert '00:03' hat.
+
+3. pi : Projektion der Spalten "id" und "name" von der Relation Tournament.
+ 

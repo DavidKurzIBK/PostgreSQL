@@ -1,0 +1,6 @@
+π Tournament.name (σ Player.firstname='Aimee' ∧ Player.lastname = 'Lamb' (Player⋈ Player.id=Participation.playerId Participation⋈ Participation.tournamentId=Tournament.id Tournament))
+
+
+-- The expression begins with joining the Player table with the Participation table on the player IDs, then joins the result with the Tournament table on the tournament IDs. 
+The selection operation filters the rows where the player's first name is 'Aimee' and the last name is 'Lamb'.
+Finally, the projection operation selects the tournament names from the resulting table.
