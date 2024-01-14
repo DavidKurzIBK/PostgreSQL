@@ -1,0 +1,5 @@
+-- über Mengendifferenz bzw. left semi-join
+-- pi TrackId, Name, UnitPrice(Track - (Track ⋉ (sigma PlaylistId = 5 PlaylistContent)))
+
+-- alternativ über left join
+pi Track.TrackId, Name, UnitPrice (sigma PlaylistId = null (Track ⟕ (sigma PlaylistId = 5 (PlaylistContent))))

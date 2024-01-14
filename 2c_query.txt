@@ -1,0 +1,10 @@
+pi FirstName, LastName, Track.Name, InvoiceDate(sigma Invoice.InvoiceDate > date('2010-01-01') and  
+Genre.Name ='Rock' and 
+Customer.CustomerId = Invoice.CustomerId
+(Customer ⨯
+(sigma Invoice.InvoiceId = InvoiceParts.InvoiceId
+(Invoice ⨯
+(sigma InvoiceParts.TrackId = Track.TrackId
+(InvoiceParts ⨯
+(sigma Track.GenreId = Genre.GenreId
+(Track ⨯ Genre))))))))

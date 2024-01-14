@@ -1,0 +1,15 @@
+pi Track.Name, Track.TrackId((Track ⨝ Track.TrackId = InvoiceParts.TrackId InvoiceParts) ⨝ Track.GenreId = Genre.GenreId (sigma Genre.Name ='Rock'(Genre)))
+
+#   Titel, d. h. Tracks, des Genres „Rock“, die auch tatsächlich gekauft wurden angeben!!
+
+# selection operation (σ) to filter rows from the "Genre" relation. 
+# It selects rows where the "Name" column in the "Genre" relation is equal to 'Rock'.
+
+# join operation (⨝) between the result obtained from Step 1 and the "Track" relation.
+# The condition for the join is that the "GenreId" in the "Track" relation must be equal to the "GenreId" in the filtered "Genre" relation.
+
+# join operation is performed between the result obtained from Step 2 and the "InvoiceParts" relation.
+# The condition for this join is that the "TrackId" in the "Track" relation must be equal to the "TrackId" in the "InvoiceParts" relation.
+
+# projection operation (π) is applied to the result obtained from Step 3.
+# It selects specific columns, namely "Name" and "TrackId," from the joined result.

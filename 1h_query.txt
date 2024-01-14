@@ -1,0 +1,18 @@
+-- final result is projected to include only the "Title" column, and it is given the alias "Name."
+rho Name <- Title (sigma album
+Cnt > 2(gamma CustomerId,LastName, AlbumId, Title;count(AlbumId) -> album Cnt 
+-- result from the previous joins is grouped by "CustomerId," "LastName," "AlbumId," and "Title."
+-- Aggregation is performed to count the number of distinct "AlbumId" values for each group, and the result is given the alias "album Cnt."
+-- Rows are selected from the grouped and aggregated result where the count of distinct albums ("album Cnt") is greater than 2.
+
+(Customer natural join (sigma InvoiceDate > date('2010-01-01')Invoice) 
+-- selects rows from the "Invoice" relation where the "InvoiceDate" is greater than January 1, 2010.
+
+natural join InvoiceParts 
+natural join Track 
+natural join Album)))
+
+-- volves a series of natural joins involving the "Customer," "Invoice," "InvoiceParts," "Track," and "Album" relations. The result is a joined relation based on common attributes.
+
+# alle Kund*innen, die nach dem 1. Januar 2010 mindestens drei Titel
+eines Albums gekauft haben

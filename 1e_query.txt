@@ -1,0 +1,26 @@
+pi LastName, FirstName, Track.Name -> Trackname,Artist.Name -> Artistname, Album.Title -> Albumtitle(sigma LastName <'C'Customer ⨝ Customer.CustomerId = Invoice.CustomerId Invoice ⨝ Invoice.InvoiceId = InvoiceParts.InvoiceId InvoiceParts ⨝ InvoiceParts.TrackId = Track.TrackId Track ⨝ Track.AlbumId = Album.AlbumId Album ⨝ Album.ArtistId = Artist.ArtistId Artist)
+
+# Kund*innen, d. h. Customer, deren Nachname mit „A“ oder „B“ beginnt, gekauften Lieder.
+
+# join operation (⨝) between the "Customer" relation and the "Invoice" relation.
+# The condition for the join is that the "CustomerId" in the "Customer" relation must be equal to the "CustomerId" in the "Invoice" relation.
+
+# join operation is performed between the result obtained from Step 1 and the "InvoiceParts" relation.
+# The condition for this join is that the "InvoiceId" in the "Invoice" relation must be equal to the "InvoiceId" in the "InvoiceParts" relation.
+
+# join operation is performed between the result obtained from Step 2 and the "Track" relation.
+# The condition for this join is that the "TrackId" in the "InvoiceParts" relation must be equal to the "TrackId" in the "Track" relation.
+
+# join operation is performed between the result obtained from Step 3 and the "Album" relation.
+# The condition for this join is that the "AlbumId" in the "Track" relation must be equal to the "AlbumId" in the "Album" relation.
+
+# final join operation is performed between the result obtained from Step 4 and the "Artist" relation.
+# The condition for this join is that the "ArtistId" in the "Album" relation must be equal to the "ArtistId" in the "Artist" relation.
+
+# selection operation (σ) is applied to filter rows where the "LastName" in the "Customer" relation is less than 'C'.
+
+# projection operation (π) is applied to select specific columns:
+#"LastName" and "FirstName" from the "Customer" relation,
+#"Name" from the "Track" relation (renamed as "Trackname"),
+#"Name" from the "Artist" relation (renamed as "Artistname"),
+#"Title" from the "Album" relation (renamed as "Albumtitle").

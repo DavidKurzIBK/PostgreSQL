@@ -1,0 +1,13 @@
+pi Playlist.Name, Track.Name(Playlist ⨝ Playlist.PlaylistId = PlaylistContent.PlaylistId PlaylistContent ⨝ Track.TrackId = PlaylistContent.TrackId Track)
+
+# jede Playlist, welche Titel sie enthält.
+
+#  join operation (⨝) between the "Playlist" relation and the "PlaylistContent" relation.
+# The condition for the join is that the "PlaylistId" in the "Playlist" relation must be equal to the "PlaylistId" in the "PlaylistContent" relation.
+
+#  join operation is performed between the result obtained from Step 1 and the "Track" relation.
+# The condition for this join is that the "TrackId" in the "Track" relation must be equal to the "TrackId" in the joined result from Step 1.
+
+# projection operation (π) is applied to the result obtained from Step 2.
+# It selects specific columns, namely "Name" from the "Playlist" relation and "Name" from the "Track" relation.
+

@@ -1,0 +1,4 @@
+"Artist.ArtistId","Artist.Name"
+"84","Foo Fighters"
+
+1 tuple

@@ -1,0 +1,21 @@
+# alle Lieder, die nicht in der Playlist mit der PlaylistId 5 enthalten sind, mit zwei verschiedenen Relationenalgebra-Ausdrücken, indem Sie
+# 1) bei erster Variante einen Semi-Join und
+# 2) bei zweiter Variante einen Outer-Join verwenden
+
+-- über Mengendifferenz bzw. left semi-join
+pi TrackId, Name, UnitPrice(Track - (Track ⋉ (sigma PlaylistId = 5 PlaylistContent)))
+
+# sigma part selects rows from the "PlaylistContent" relation where the "PlaylistId" is equal to 5.
+# left semi-join (⋉) between the "Track" relation and the result obtained from Step 1. It selects all rows from "Track" where there is a matching "TrackId"
+# in the filtered "PlaylistContent" relation.
+# set difference operation (-). It selects all rows from the "Track" relation that are not present in the result obtained from Step 2.
+# projection (π) and selects specific columns "TrackId," "Name," and "UnitPrice" from the result obtained from Step 3.
+
+-- alternativ über left join
+pi Track.TrackId, Name, UnitPrice (sigma PlaylistId = null (Track ⟕ (sigma PlaylistId = 5 (PlaylistContent))))
+
+# sigma selects rows from the "PlaylistContent" relation where the "PlaylistId" is equal to 5.
+#  left outer join (⟕) between the "Track" relation and the result obtained from Step 1. It includes all rows from "Track" and matches with the filtered
+# "PlaylistContent" relation. If there is no match, the columns from "PlaylistContent" will contain null values.
+# sigma selects rows where the "PlaylistId" is null, indicating that there was no match in the left outer join.
+# projection (π) and selects specific columns "Track.TrackId," "Name," and "UnitPrice" from the result obtained from Step 3.

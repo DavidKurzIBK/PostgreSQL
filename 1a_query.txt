@@ -1,0 +1,9 @@
+pi InvoiceId, CustomerId, InvoiceDate, Total (sigma Total < 5 (Invoice))
+
+#Rechnungen, d. h. Invoice, deren Gesamtsumme, d. h. Total,
+#kleiner als 5 Euro ist. Geben Sie dazu entsprechendes Ergebnis mit Relationenschema
+
+# symbol π (pi) stands for the projection operation, which selects specific columns from a relation, in this case, it's selecting the
+# columns "InvoiceId," "CustomerId," "InvoiceDate," and "Total" from the relation "Invoice."
+# symbol σ (sigma) represents the selection operation, which filters rows based on a given condition.
+# this case, it's selecting rows from the "Invoice" relation where the value in the "Total" column is less than 5.

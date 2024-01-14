@@ -1,0 +1,13 @@
+pi InvoiceId, InvoiceDate, Total, LastName((sigma date('2009-10-31')< InvoiceDate∧InvoiceDate<date('2009-12-01')(Invoice))⨝ Invoice.CustomerId = Customer.CustomerId Customer)
+
+
+# Rechnungen, die mit November 2009 ausgestellt wurden. 
+
+# selection operation (σ) to filter rows from the "Invoice" relation.
+# It selects rows where the "InvoiceDate" is greater than October 31, 2009, and less than December 1, 2009.
+
+# join operation (⨝) between the result obtained from Step 1 and the "Customer" relation.
+# The condition for the join is that the "CustomerId" in the "Invoice" relation must be equal to the "CustomerId" in the "Customer" relation.
+
+# rojection operation (π) is applied to the result obtained from Step 2.
+# It selects specific columns, namely "InvoiceId," "InvoiceDate," "Total," and "LastName."

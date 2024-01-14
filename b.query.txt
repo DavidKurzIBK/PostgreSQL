@@ -1,0 +1,1 @@
+πName, Age, Place (σAge >= 25 ∧ Place ≠ 'Innsbruck' (Member))

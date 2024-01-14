@@ -1,0 +1,31 @@
+pi ArtistId, Name (sigma avg_duration > 250000 
+(γ Artist.ArtistId, Artist.Name; 
+avg(Miliseconds) -> avg_duration(Track 
+natural join Album 
+join Album.ArtistId = Artist.ArtistId Artist ))) ∩ 
+pi ArtistId, Name (sigma avg_size < 8500000(γ Artist.ArtistId, Artist.Name; 
+avg(Bytes) -> avg_size(Track 
+natural join Album 
+join Album.ArtistId = Artist.ArtistId Artist )))
+
+# Künstler*innen, d. h. Artist, deren Titel
+• durchschnittlich über 4 Minuten und 10 Sekunden lang sind und
+• durchschnittliche eine Dateigröße unter 8, 5 MB haben
+
+# Natural Join: This part involves a natural join between the "Track" and "Album" relations based on common attributes. The resulting relation is then joined with the "Artist" relation using the condition "Album.ArtistId = Artist.ArtistId."
+
+# Grouping (γ): The result is grouped by "Artist.ArtistId" and "Artist.Name."
+
+# Aggregation (avg): The average duration (in milliseconds) is calculated for each group.
+
+# Natural Join: Similar to the first part, this involves a natural join between the "Track" and "Album" relations, followed by a join with the "Artist" relation using the condition "Album.ArtistId = Artist.ArtistId."
+
+# Grouping (γ): The result is grouped by "Artist.ArtistId" and "Artist.Name."
+
+# Aggregation (avg): The average size (in bytes) is calculated for each group.
+
+# results obtained from the two parts are intersected. This means that only the rows common to both results will be retained.
+
+# final result is filtered to include only those rows where the average duration is greater than 250,000 milliseconds.
+
+# result is projected to include only the "ArtistId" and "Name" columns.

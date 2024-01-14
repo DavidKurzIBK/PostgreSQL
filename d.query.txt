@@ -1,0 +1,2 @@
+-- pi Member.Place  (σ Member.Age ≠ NULL (Member)) ⨝ pi Chapter.Location (Chapter)
+π Member.Place (σ Member.Age ≠ NULL ∧ Chapter.Location ≠ NULL (Member ⨝ Chapter))

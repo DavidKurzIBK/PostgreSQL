@@ -1,0 +1,7 @@
+π FirstName, LastName, Track.Name, InvoiceDate(σ Invoice.InvoiceDate > date('2010-01-01') ∧ 
+Genre.Name ='Rock' ∧ 
+Customer.CustomerId = Invoice.CustomerId ∧ 
+Invoice.InvoiceId = InvoiceParts.InvoiceId ∧ 
+InvoiceParts.TrackId = Track.TrackId ∧ 
+Track.TrackId = Genre.GenreId 
+(Customer ⨯ Invoice ⨯ InvoiceParts ⨯ Track ⨯ Genre )) 
