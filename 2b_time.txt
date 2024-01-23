@@ -1,0 +1,3 @@
+Successfully run. 
+Total query runtime: 2 secs 350 msec.
+1 rows affected.

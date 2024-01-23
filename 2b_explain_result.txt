@@ -1,0 +1,8 @@
+"QUERY PLAN"
+"Finalize Aggregate  (cost=129624.31..129624.32 rows=1 width=4)"
+"  ->  Gather  (cost=129624.10..129624.31 rows=2 width=4)"
+"        Workers Planned: 2"
+"        ->  Partial Aggregate  (cost=128624.10..128624.11 rows=1 width=4)"
+"              ->  Parallel Seq Scan on title_akas  (cost=0.00..119580.88 rows=3617288 width=4)"
+
+

@@ -1,0 +1,6 @@
+"QUERY PLAN"
+"Result  (cost=0.46..0.47 rows=1 width=4)"
+"  InitPlan 1 (returns $0)"
+"    ->  Limit  (cost=0.43..0.46 rows=1 width=4)"
+"          ->  Index Only Scan Backward using ordering_index on title_akas  (cost=0.43..181579.42 rows=8683446 width=4)"
+"                Index Cond: (ordering IS NOT NULL)"

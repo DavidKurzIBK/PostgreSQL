@@ -1,0 +1,40 @@
+"QUERY PLAN"
+"Result  (cost=0.46..0.47 rows=1 width=4)"
+"  InitPlan 1 (returns $0)"
+"    ->  Limit  (cost=0.43..0.46 rows=1 width=4)"
+"          ->  Index Only Scan Backward using ordering_index on title_akas  (cost=0.43..181579.42 rows=8683446 width=4)"
+"                Index Cond: (ordering IS NOT NULL)"
+
+
+
+Index Only Scan Backward using ordering_index on title_akas:
+
+Ein Index Only Scan ist eine Operation, bei der der Datenbank-Optimizer den Index "ordering_index" verwendet, um die benötigten Daten zu extrahieren.
+Der Index ist so konfiguriert, dass er rückwärts (Backward) durchsucht wird, was bedeutet, dass die Abfrage nach absteigender Reihenfolge sortierte Daten verwendet.
+Die Bedingung (Index Cond) "ordering IS NOT NULL" zeigt an, dass nur Einträge ausgewählt werden, bei denen das Feld "ordering" nicht den Wert NULL hat.
+Limit:
+
+Die Limit-Operation begrenzt die Anzahl der zurückgegebenen Zeilen auf 1.
+Die Kosten dieses Schritts werden mit 0.43 bis 0.46 angegeben.
+InitPlan:
+
+InitPlan ist ein Mechanismus, bei dem bestimmte Ausdrücke vor dem eigentlichen Abfrageprozess ausgewertet werden.
+Hier wird ein Limit verwendet, um die Zeilenanzahl auf 1 zu begrenzen, bevor die Hauptabfrage gestartet wird.
+Result:
+
+Dies ist das Endergebnis der Abfrage, das eine einzige Zeile mit einer Breite von 4 (width=4) zurückgibt.
+Die Gesamtkosten der Abfrage liegen zwischen 0.46 und 0.47.
+Auswirkungen des Index:
+
+Die Verwendung des Index "ordering_index" ermöglicht einen effizienten Zugriff auf die Daten, insbesondere wenn nach dem Feld "ordering" sortiert wird.
+Ein Index Only Scan ist effizienter als ein vollständiger Tabellenscan, da nur die benötigten Informationen aus dem Index extrahiert werden, ohne auf die eigentliche Tabelle zuzugreifen.
+Ausführungszeiten bei mehrfacher Ausführung:
+
+Bei wiederholter Ausführung der Abfrage wird wahrscheinlich eine konsistente oder sogar verbesserte Ausführungszeit beobachtet, da der Index weiterhin vorhanden ist und die Datenbankoptimierung davon profitiert.
+Durch die Verwendung des Index kann die Datenbank die Zeilen schneller finden, was zu einer insgesamt effizienteren Abfrageausführung führt.
+Es ist wichtig zu beachten, dass die genaue Ausführungszeit von verschiedenen Faktoren abhängt, einschließlich der Datenbankgröße, der Hardwareleistung und anderer gleichzeitiger Aktivitäten auf dem Datenbanksystem.
+
+
+
+
+

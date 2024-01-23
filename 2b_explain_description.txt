@@ -1,0 +1,32 @@
+"QUERY PLAN"
+"Finalize Aggregate  (cost=129624.31..129624.32 rows=1 width=4)"
+"  ->  Gather  (cost=129624.10..129624.31 rows=2 width=4)"
+"        Workers Planned: 2"
+"        ->  Partial Aggregate  (cost=128624.10..128624.11 rows=1 width=4)"
+"              ->  Parallel Seq Scan on title_akas  (cost=0.00..119580.88 rows=3617288 width=4)"
+
+
+
+
+Ausführungsplan (Query Plan) beschreibt, wie eine Abfrage in einer relationalen Datenbank ausgeführt wird. Der Plan besteht aus verschiedenen Schritten, die die logische und physische Reihenfolge der Datenbankoperationen darstellen. Hier ist eine Beschreibung der einzelnen Schritte:
+
+Parallel Seq Scan on title_akas:
+
+Dieser Schritt führt eine sequenzielle Durchsuchung (Scan) der Tabelle "title_akas" durch.
+Es handelt sich um einen parallelen Scan, was bedeutet, dass mehrere Arbeitsprozesse (Workers) gleichzeitig Teile der Tabelle durchsuchen.
+Die Kosten dieses Schritts werden mit 0.00 bis 119580.88 angegeben.
+Partial Aggregate:
+
+In diesem Schritt erfolgt eine partielle Aggregation der Ergebnisse aus dem vorherigen Schritt.
+Es werden aggregierende Funktionen auf Teilmengen der Daten angewendet.
+Die Kosten dieses Schritts werden mit 128624.10 bis 128624.11 angegeben.
+Gather:
+
+Hier werden die partiell aggregierten Ergebnisse von den verschiedenen Worker-Prozessen gesammelt.
+Die geplanten Worker-Prozesse sind 2, was auf eine parallele Verarbeitung hinweist.
+Die Kosten dieses Schritts werden mit 129624.10 bis 129624.31 angegeben.
+Finalize Aggregate:
+
+Dieser Schritt finalisiert die Aggregation, indem die gesammelten Teilergebnisse zu einem endgültigen Ergebnis zusammengeführt werden.
+Die Kosten dieses Schritts sind minimal und betragen nur 0.01.
+Das Ergebnis dieser Endaggregation ist eine einzige Zeile mit einer Breite von 4 (width=4).
